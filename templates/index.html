@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body class="bg-dark text-white">
+
+    {% extends "base.html" %}
+
+    {% block content %}
+    <h1>Welcome, {{name}}</h1>
+    
+    {% if age<40 %}
+        <h2>You are eligible to play</h2>
+    {% else %}
+        <h2>You are not eligible</h2>
+    {% endif %}
+    <h2>The last 5 innings scores are:</h2>
+
+    <table border = 1 solid black>
+        <tr>
+            <th>Keys</th>
+            <th>Items</th>
+        </tr>
+        {% for key, value in runs.items() %}
+        <tr>
+            <td>{{key}}</td>
+            <td>{{value}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, itaque quos? Reprehenderit repudiandae, itaque soluta impedit sunt ad assumenda laudantium dolorum, doloribus voluptatibus consequatur amet quaerat sequi numquam eligendi unde.
+    Error voluptatem voluptatibus eligendi sed fugiat nobis dicta possimus est ipsa laudantium? Veniam, hic suscipit ratione molestias libero cumque laboriosam nisi consectetur iste dolores? Veritatis eligendi voluptatibus commodi sed quisquam!
+    Nemo corrupti fuga ullam assumenda voluptatibus doloremque atque culpa eligendi nostrum alias, praesentium quisquam ducimus, sit odit sequi pariatur laboriosam quam optio illo. Debitis repellat atque sapiente non, voluptas rem!
+    Distinctio iste earum cumque a ipsam sit reiciendis reprehenderit accusantium pariatur nemo non natus, placeat dicta. Voluptatem, consequatur nostrum! Maiores, excepturi aperiam rerum perferendis amet velit possimus tempora nesciunt necessitatibus?
+    Dicta alias dolore voluptate, omnis nisi tempore ab tempora vel nobis consectetur porro suscipit praesentium ipsum! Alias omnis commodi, aperiam provident nisi et atque? Et magnam impedit nihil quaerat alias.
+    Provident dolorum, est maxime, harum odio eos asperiores quis hic reprehenderit expedita ratione! Eum animi suscipit nam? Excepturi ducimus amet possimus itaque. Accusantium itaque porro temporibus officia sunt mollitia eos.
+    Tempore esse quidem sint nobis aspernatur culpa laboriosam commodi neque illum aliquam quae explicabo a deleniti modi quis laudantium eius delectus, omnis velit? Similique recusandae dolorum at! Commodi, perferendis. Harum.
+    Reiciendis neque animi doloremque consectetur odio esse sequi, delectus, ipsum similique consequuntur inventore maiores ex. Est, sunt labore, iste quae ullam omnis impedit nihil voluptatum, qui unde blanditiis provident possimus.
+    At laboriosam molestias, quidem tempore aspernatur harum rem, commodi libero maiores fugit magnam deleniti inventore iure neque! Excepturi quos iste qui beatae, officiis magni odio est, voluptatum maxime deserunt hic.
+    Exercitationem iste maxime reprehenderit corrupti est hic id mollitia quaerat ad perspiciatis beatae veritatis sequi, doloremque neque dolorum corporis, eius eos. Molestias eaque repellat officiis blanditiis quis illum corrupti! A.</p>
+   
+    {% endblock %}
+</body>
+</html>

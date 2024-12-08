@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="title text-center justify-content-center">{% block title %} Add New Player {% endblock %}</h1>
+<hr>
+  <div class="d-flex justify-content-center text-black">
+    <form method="post">
+      <div class="form-floating mb-3">
+        <input type="text" name="name" class="form-control" id="floatingInput" 
+         placeholder="Name">
+        <label for="floatingInput">Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="number" name="age" class="form-control" id="floatingInput" 
+         placeholder="Age">
+        <label for="floatingInput">Age</label>
+      </div>
+      <p><button class="btn btn-primary" type="submit">Submit</button></p>
+    </form>
+  </div>
+{% endblock %}
